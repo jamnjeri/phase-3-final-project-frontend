@@ -1,0 +1,40 @@
+:root {
+    --colorOne: #001d3d;
+    --colorTwo: #011627;
+    --colorThree: #ffc300;
+    --colorFour: #ffd60a;
+    --colorFive: #38b000;
+    --colorSix: #ffffff;
+    --colorSeven: #111111;
+    --colorEight: #70e000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--colorTwo);
+    color: var(--colorSix);
+    /* gap: 2%; */
+}
+  
+.navbar a {
+    color: var(--colorSix);
+    text-decoration: none;
+    margin-right: 1%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 100px;
+    margin-left: 2%;
+}
+
+.title {
+    /* align-items: center;
+    text-align: center; */
+    margin-right: 10%;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 550;
+}

@@ -1,0 +1,76 @@
+.container2{
+    background-color: var(--colorTwo);
+    /* margin-bottom: 100px; */
+    padding: 21px;
+}
+.centered-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    background-color: var(--colorTwo);
+    margin: 30px;
+    /* border: 2px solid red; */
+}
+
+.card {
+    max-width: 400px;
+    background-color: var(--colorTwo);
+    color: var(--colorSix);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel {
+    display: flex;
+    width: 2400px; /* width = number of slides * slide width */
+    animation: slide 40s infinite; /* adjust slide duration as needed */
+}
+
+.carousel img {
+    width: 800px; /* adjust slide width as needed */
+    height: 400px; /* adjust slide height as needed */
+    border-radius: 10px;
+    margin: 10px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-800px);
+    }
+    66.67% {
+        transform: translateX(-1600px);
+    }
+    100% {
+        transform: translateX(-2400px);
+    }
+}
+
+.card-text2 {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.carousel-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-buttons button {
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.link1 {
+    color: white;
+    text-decoration: none;
+}
