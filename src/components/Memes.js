@@ -1,7 +1,11 @@
 import React from 'react'
 import styles from "./dashboard.css"
 
-function Memes({ meme, deleteMeme }) {
+function Memes({ meme, deleteMeme, updateMeme }) {
+
+    function handleUpdate(){
+        updateMeme(meme.id, meme.user_id)
+    }
 
     function handleDelete(){
         deleteMeme(meme.id, meme.user_id)
@@ -14,7 +18,7 @@ function Memes({ meme, deleteMeme }) {
             <h2 className="card-title">{meme.name}</h2>
             <h4 className='card-name'>Added By: {meme.user.full_name}</h4>
             <button onClick={handleDelete}>Delete</button>
-            <button>Update</button>
+            <button onClick={handleUpdate}>Update</button>
         </div>
     </div>
   )
