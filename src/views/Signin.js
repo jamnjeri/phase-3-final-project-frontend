@@ -3,12 +3,12 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Login from '../components/Login'
 
-function Signin() {
+function Signin({isLoggedin}) {
   return (
     <div>
         <Navbar />
         <>
-        <Login />
+        <Login isLoggedin={isLoggedin} />
         </>
         <Footer />
     </div>
