@@ -7,15 +7,42 @@ function Dashboard({ userInfo }) {
     const [memes, setMemes]=useState([]);
     // console.log(userInfo)
 
+    const [name, setName]= useState("");
+    const[url, setUrl]= useState("");
+
     useEffect(() => {
         fetch('http://localhost:9292/memes')
         .then(response => response.json())
         .then(data => setMemes(data));
     },[]);
 
+    // Add Meme
+    function handleSubmit(event){
+        event.preventDefault();
+        const newMeme = { 
+            name: name, 
+            url: url, 
+            user_id: userInfo.data.id 
+        }
+        console.log(newMeme)
 
-    function addMeme(){
+        // POST data
+        fetch("http://localhost:9292/memes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newMeme)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
 
+        // Update State
+        setMemes([...memes, response.data]);
+        // Set back to empty array
+        setName('');
+        setUrl('');
     }
 
     function updateMeme(){
@@ -54,6 +81,13 @@ function Dashboard({ userInfo }) {
         ))}
     </div>
     <h1>Add your own Memes:</h1>
+    <form className='form33' onSubmit={handleSubmit}>
+        <label className='labelz' htmlFor="name">Name:</label>
+        <input id="name" type="text" name="name" onChange={(e) => setName(e.target.value)} />
+        <label className='labelz' htmlFor="url">URL:</label>
+        <input id='url' type='text' name="url" onChange={(e) => setUrl(e.target.value)} ></input>
+        <button type="submit">Add Meme</button>
+    </form>
     </>
 
   );

@@ -3,3 +3,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.form33 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labelz {
+    margin-bottom: 1rem;
+}
