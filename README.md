@@ -13,6 +13,11 @@ https://github.com/jamnjeri/phase-3-final-project-frontend
 https://github.com/jamnjeri/phase-3-final-project-backend
 ```
 
+The deployed backend link is:
+```
+https://jamila-meme-generator.onrender.com/memes
+```
+
 ## REQUIREMENTS
 ### Prerequisites
 * node v14.17.4 and above
