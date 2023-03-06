@@ -13,3 +13,32 @@
 .labelz {
     margin-bottom: 1rem;
 }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+  
+input[type="text"] {
+    width: 400px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+  
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffd60a;
+    color: #fff;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #0069d9;
+}

@@ -5,15 +5,24 @@ import styles from "./dashboard.css"
 function Dashboard({ userInfo }) {
 
     const [memes, setMemes]=useState([]);
+    const [backup, setBackup]=useState([]);
+    const [pMemes, setPMemes]=useState([]);
     // console.log(userInfo)
 
     const [name, setName]= useState("");
     const[url, setUrl]= useState("");
 
+    const [showItems, setShowItems] = useState(false);
+
+    const [searchTerm, setSearchTerm] = useState('');
+
     useEffect(() => {
         fetch('http://localhost:9292/memes')
         .then(response => response.json())
-        .then(data => setMemes(data));
+        .then(data => {
+            setMemes(data)
+            setBackup(data)
+        });
     },[]);
 
     // Add Meme
@@ -124,14 +133,59 @@ function Dashboard({ userInfo }) {
         }
     }
 
+    const handleClick = () => {
+        const memesOfInterest = memes.filter((item) => {
+            return (item.user_id === userInfo.data.id)
+        })
+        setPMemes(memesOfInterest)
+        setShowItems(!showItems);
+    };
+
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+        // Filter through the array
+        if (event.target.value.length !== 0){
+            const filteredMemes = memes.filter((meme) =>
+            meme.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            setMemes(filteredMemes)
+        }
+        else {
+            setMemes(backup)
+        }
+    
+    };
+
+
+
   return (
     <>
     <h1>Welcome To The Meme Library: </h1>
+
+    {/* SearchBar */}
+    <div className='search-container'>
+        <input type="text" placeholder="Search by name" value={searchTerm} onChange={handleSearch} />
+    </div>
+
+    {/* Meme Cards */}
     <div className="card-container">
         {memes.map((meme, index) => (
         <Memes key={index} meme={meme} deleteMeme={deleteMeme} updateMeme={updateMeme} />
         ))}
     </div>
+    <button onClick={handleClick}>View Your Personal Memes:</button>
+    {/* <div className="card-container">
+        {pMemes.map((meme, index) => (
+        <Memes key={index} meme={meme} deleteMeme={deleteMeme} updateMeme={updateMeme} />
+        ))}
+    </div> */}
+    {showItems && (
+        <div className="card-container">
+        {pMemes.map((meme, index) => (
+        <Memes key={index} meme={meme} deleteMeme={deleteMeme} updateMeme={updateMeme} />
+        ))}
+     </div>
+    )}
     <h1>Add your own Memes:</h1>
     <form className='form33' onSubmit={handleSubmit}>
         <label className='labelz' htmlFor="name">Name:</label>
