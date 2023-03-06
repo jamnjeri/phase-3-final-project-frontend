@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# MeMe Club
+==========================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## DESCRIPTION
+**MeMe Club** is a Meme Generating full stack web application that allows users to register, log in and browse through a library of memes. It also allows users to add, update and delete their own memes onto the platform.
 
-## Available Scripts
+This project is the phase III capstone project at Moringa School of Technology. It's a compilation of the skills learnt through the software development course, in the third phase that covers the basics to Ruby. It mainly puts focus on REACT.js for Front-end web programming, and Ruby .
 
-In the project directory, you can run:
+```
+https://github.com/jamnjeri/phase-3-final-project-frontend
+```
+```
+https://github.com/jamnjeri/phase-3-final-project-backend
+```
 
-### `npm start`
+## REQUIREMENTS
+### Prerequisites
+* node v14.17.4 and above
+* npm 6.14.14 and above
+* Vue 2.6.11
+* Then install the various packages from package.json `npm install`
+* Create environment variables
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### PROJECT DELIVERABLES
+The MeMe Club platform has a single user authentication mechanism for users accessing the site as surfers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As a user , one should able to:
+1. Register for & Login to the platform.
+2. View a landing page that urges the user to sign in or register.
+3. Add a new meme to the existing library.
+4. View all the memes they have particularly added.
+5. View all the available memes.
+6. Search for a meme by title.
+7. Update details for a meme they specifically added to the library.
+8. Delete any details of memes they added.
 
-### `npm test`
+As a user:
+1. MUST be logged in to browse through the library.
+2. Will NOT be able to update/delete memes they have not added to the library.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### PROJECT-SETUP-INSTRUCTIONS
+1. [Clone the repo to your local machine](https://github.com/jamnjeri/phase2-project.git)
+2. Install required dependencies for by running `npm i`.
+3. Legacy dependencies may be installed by running `npm i -f`
+4. Run the application using  `npm start` to start the development server.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### TECHNOLOGIES-Used
+- HTML - Used as a template to hold the React components of the app via the root div. <br/>
+- CSS -used to style the User Interface. <br/>
+- JS - Java Script is used to make the website interactive. <br/>
+- REACT.js - Front-end Library. <br/>
+- ​Bootstrap - Styling purposes. <br/>
+- Git- For Version control.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Status:
+    maintained, and is currently in development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Version:
+    v0.1.0
+    
+## Usage
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Copyright © 2023 Mathu Jamila
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Website Sample Images
+![Home Screen](./src/assests/Screenshot%20from%202023-03-06%2011-33-00.png)

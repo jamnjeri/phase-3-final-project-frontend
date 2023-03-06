@@ -32,6 +32,7 @@ function Register({isLoggedin}) {
     else{
       const credentials = { full_name, email, password };
 
+
       fetch("https://jamila-meme-generator.onrender.com/auth/register", {
           method: "POST",
           headers: {
