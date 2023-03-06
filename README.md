@@ -18,6 +18,11 @@ The deployed backend link is:
 https://jamila-meme-generator.onrender.com/memes
 ```
 
+The deployed frontend link is:
+```
+https://phase-3-final-project-frontend.vercel.app/
+```
+
 ## REQUIREMENTS
 ### Prerequisites
 * node v14.17.4 and above
