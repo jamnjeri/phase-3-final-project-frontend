@@ -17,7 +17,7 @@ function Dashboard({ userInfo }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:9292/memes')
+        fetch('https://jamila-meme-generator.onrender.com/memes')
         .then(response => response.json())
         .then(data => {
             setMemes(data)
@@ -36,7 +36,7 @@ function Dashboard({ userInfo }) {
         console.log(newMeme)
 
         // POST data
-        fetch("http://localhost:9292/memes", {
+        fetch("https://jamila-meme-generator.onrender.com/memes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -92,7 +92,7 @@ function Dashboard({ userInfo }) {
             console.log(updatedMeme)
 
             // PATCH 
-            fetch(`http://localhost:9292/memes/${meme_id}`, {
+            fetch(`https://jamila-meme-generator.onrender.com/memes/${meme_id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -117,7 +117,7 @@ function Dashboard({ userInfo }) {
         if(user_id === userInfo.data.id){
             console.log("Possible")
             // DELETE
-            fetch(`http://localhost:9292/memes/${meme_id}`, {
+            fetch(`https://jamila-meme-generator.onrender.com/memes/${meme_id}`, {
                 method: "DELETE"
             })
             .then(response => response.json())

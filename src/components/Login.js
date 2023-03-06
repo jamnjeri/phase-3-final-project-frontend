@@ -22,7 +22,7 @@ function Login({isLoggedin}) {
 
         const credentials = { email, password };
 
-        fetch("http://localhost:9292/auth/login", {
+        fetch("https://jamila-meme-generator.onrender.com/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
